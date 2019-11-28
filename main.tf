@@ -25,7 +25,7 @@ locals {
         )}"
     ]
     private_subnets = [
-        for i in range(local.num_azs) : "${cidrsubnet(var.cidr, local.bits, local.num_azs)}"
+        for i in range(local.num_azs) : "${cidrsubnet(var.cidr, local.bits, i)}"
     ]
 }
 
