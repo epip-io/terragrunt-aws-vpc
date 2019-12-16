@@ -1,12 +1,6 @@
 
 provider "aws" {
   region  = var.aws_region
-  version = "~> 2.40"
-}
-
-terraform {
-  backend "s3" {}
-  required_version = "~> 0.12.16"
 }
 
 locals {
